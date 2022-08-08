@@ -3,12 +3,9 @@ package models;
 import interfaces.WordFrequency;
 import interfaces.WordFrequencyAnalyzer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
-public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
+public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer{
     @Override
     public int calculateHighestFrequency(String text) {
         String[] words = text.split("[^a-zA-Z']");                  // TODO should this be arraylist?
@@ -69,6 +66,9 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
         System.out.print("\n" + wordsHashMap);
         System.out.print("\n" + requestedList);
 
+
+
+
                             // create a list of all unique words CHECK
                             // for each word retrieve frequency (use existing method) and create object
                             // add object to list
@@ -78,4 +78,6 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
 
         return null;
     }
+
+
 }
