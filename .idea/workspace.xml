@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8d728c88-ebfb-4733-8d21-8ba97d45c1c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WordFrequencyLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WordFrequencyLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/WordFrequencyAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/WordFrequencyAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/WordFrequencyAnalyzerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/WordFrequencyAnalyzerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/WordFrequencyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/WordFrequencyClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659958855373</updated>
-      <workItem from="1659958857918" duration="11091000" />
+      <workItem from="1659958857918" duration="17598000" />
     </task>
     <servers />
   </component>

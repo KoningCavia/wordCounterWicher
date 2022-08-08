@@ -1,5 +1,7 @@
 package interfaces;
 
+import models.WordFrequencyClass;
+
 import java.util.List;
 
 public interface WordFrequencyAnalyzer {
@@ -8,5 +10,5 @@ public interface WordFrequencyAnalyzer {
 
     int calculateFrequencyForWord(String text, String word);
 
-    List<WordFrequency> calculateMostFrequentNWords(String text, int n);
+    List<WordFrequencyClass> calculateMostFrequentNWords(String text, int n);
 }

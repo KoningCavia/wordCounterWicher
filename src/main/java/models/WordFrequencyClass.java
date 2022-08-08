@@ -2,7 +2,7 @@ package models;
 
 import interfaces.WordFrequency;
 
-public class WordFrequencyClass implements WordFrequency {
+public class WordFrequencyClass implements WordFrequency, Comparable<WordFrequencyClass> {
 
     private String word;
     private int frequency;
@@ -20,7 +20,7 @@ public class WordFrequencyClass implements WordFrequency {
 
     @Override       // TODO REMOVE
     public String toString() {
-        return "word='" + word + '\'' + ", frequency=" + frequency;
+        return "\n" + word + ", " + frequency;
     }
 
     @Override
@@ -33,4 +33,16 @@ public class WordFrequencyClass implements WordFrequency {
         return frequency;
     }
 
+    @Override
+    public int compareTo(WordFrequencyClass o) {
+        getWord().compareTo(o.getWord());
+
+        if (getFrequency() > o.getFrequency() ) {
+            return -1;
+        } else if (getFrequency() == o.getFrequency()) {
+            return getWord().compareTo(o.getWord());
+        } else {
+            return 1;
+        }
+    }
 }

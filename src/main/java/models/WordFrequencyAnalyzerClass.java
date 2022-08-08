@@ -1,6 +1,5 @@
 package models;
 
-import interfaces.WordFrequency;
 import interfaces.WordFrequencyAnalyzer;
 
 import java.util.*;
@@ -45,38 +44,27 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer{
     }
 
     @Override
-    public List<WordFrequency> calculateMostFrequentNWords(String text, int n) {
-         //String[] words = text.split("[^a-zA-Z']");
+    public List<WordFrequencyClass> calculateMostFrequentNWords(String text, int n) {
         List<String> words = List.of(text.split("[^a-zA-Z']"));
         HashMap<String, Integer> wordsHashMap = new HashMap<String, Integer>();
+        List<WordFrequencyClass> objectList = new ArrayList<>();
         List<WordFrequencyClass> requestedList = new ArrayList<>();
 
         for (int i = 0; i < words.size(); i++) {
-            String wordLower = words.get(i);
+            String wordLower = words.get(i).toLowerCase();
             wordsHashMap.put(wordLower, i);
         }
-        
-        System.out.print(wordsHashMap);
-
         for (String word: wordsHashMap.keySet()) {
             int currentFreq = calculateFrequencyForWord(text, word);
             //wordsHashMap.put(word, currentFreq);
-            requestedList.add(new WordFrequencyClass(word, currentFreq));
+            objectList.add(new WordFrequencyClass(word, currentFreq));
         }
-        System.out.print("\n" + wordsHashMap);
-        System.out.print("\n" + requestedList);
-
-
-
-
-                            // create a list of all unique words CHECK
-                            // for each word retrieve frequency (use existing method) and create object
-                            // add object to list
-                            // sort objects by frequency
-                            // return n largest objects
-
-
-        return null;
+        Collections.sort(objectList);
+        for (int i = 0; i < n; i++) {
+            requestedList.add(objectList.get(i));
+        }
+        System.out.print("\n oeleboele" + requestedList);
+        return requestedList;
     }
 
 

@@ -18,6 +18,11 @@ public class WordFrequencyLauncher {
         System.out.printf("\nThe frequency for word %s is %d", testWord, j);
 
          test1.calculateMostFrequentNWords(testString, 3);
+
+         String testString2 = "The sun shines over the lake";
+         test1.calculateMostFrequentNWords(testString2, 3);
+
+
     }
 
 }
