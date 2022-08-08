@@ -14,10 +14,19 @@ public class modelsTest {
     String testString = "blie blie ja ja ja nee nee nee nee oh ja ja oh oh";
 
     @Test
-    @DisplayName("Tests whether the right frequency is found")
+    @DisplayName("Tests whether the highest frequency word in a text is found")
     void testCalculateHighestFrequency() {
-        int testFrequency =testWordFrequencyAnalyzerClass.calculateHighestFrequency(testString);
+        int testFrequency = testWordFrequencyAnalyzerClass.calculateHighestFrequency(testString);
         assertEquals(5, testFrequency, "The highest frequency should be 5, but is not 5. " +
-                "The wrong number was retrievede" );
+                "The wrong number was retrieved");
+    }
+
+    @Test
+    @DisplayName("Tests whether the frequency is found for a given word")
+    void testCalculateFrequencyForWord() {
+        int testFrequency = testWordFrequencyAnalyzerClass.calculateFrequencyForWord(testString, "blie");
+        assertEquals(2, testFrequency, "The frequency for word 'blie' should be 2, " +
+                "but a different value is returned" );
     }
 }
+

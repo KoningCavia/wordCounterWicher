@@ -33,7 +33,17 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
 
     @Override
     public int calculateFrequencyForWord(String text, String word) {
-        return 0;
+        int counter = 0;
+        String[] words = text.split("[^a-zA-Z']");
+        String wordLower = word.toLowerCase();
+
+        for (String textWord: words) {
+            String textWordLower = textWord.toLowerCase();
+            if (wordLower.equals(textWordLower)) {
+                counter++;
+            };
+        };
+        return counter;
     }
 
     @Override
