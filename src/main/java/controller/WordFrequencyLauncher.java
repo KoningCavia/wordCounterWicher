@@ -20,7 +20,7 @@ public class WordFrequencyLauncher {
          test1.calculateMostFrequentNWords(testString, 3);
 
          String testString2 = "The sun shines over the lake";
-         test1.calculateMostFrequentNWords(testString2, 3);
+         System.out.print(test1.calculateMostFrequentNWords(testString2, 3));
 
 
     }

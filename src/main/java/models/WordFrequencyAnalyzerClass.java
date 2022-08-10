@@ -56,14 +56,12 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer{
         }
         for (String word: wordsHashMap.keySet()) {
             int currentFreq = calculateFrequencyForWord(text, word);
-            //wordsHashMap.put(word, currentFreq);
             objectList.add(new WordFrequencyClass(word, currentFreq));
         }
         Collections.sort(objectList);
         for (int i = 0; i < n; i++) {
             requestedList.add(objectList.get(i));
         }
-        System.out.print("\n oeleboele" + requestedList);
         return requestedList;
     }
 

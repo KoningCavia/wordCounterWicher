@@ -18,7 +18,8 @@ public class WordFrequencyClass implements WordFrequency, Comparable<WordFrequen
     }
 
 
-    @Override       // TODO REMOVE
+
+    @Override
     public String toString() {
         return "\n" + word + ", " + frequency;
     }
